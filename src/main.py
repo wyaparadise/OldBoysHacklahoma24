@@ -29,10 +29,14 @@ SOUND_TYPINGSOUND = pygame.mixer.Sound("/Users/charliestreet/Desktop/Hacklahoma 
 SOUND_TOGGLE = pygame.mixer.Sound("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/sounds/Toggle.wav") 
 SOUND_BEEP5 = pygame.mixer.Sound("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/sounds/Beep5.wav") 
 
+pygame.mixer.music.load('/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/sounds/BackgroundEther.wav')
+
 # Setting the volume 
 
   
 # Start playing the song 
+pygame.mixer.music.set_volume(0.5)
+pygame.mixer.music.play(-1)
 
 #Time
 
