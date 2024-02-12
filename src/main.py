@@ -1,18 +1,22 @@
 import pygame
 import scenes 
+import os
 
 pygame.init()
 
+#Files
+current_directory = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(current_directory,"..")
 #Font
 
 text_speed = 20
-FONT_SCREEN_BIG = pygame.freetype.Font("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/fonts/oldterminal.ttf",50)
-FONT_SCREEN = pygame.freetype.Font("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/fonts/oldterminal.ttf",24)
-FONT_SCREEN_SMALL = pygame.freetype.Font("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/fonts/oldterminal.ttf",18)
+FONT_SCREEN_BIG = pygame.freetype.Font(file_path + "/assets/fonts/oldterminal.ttf",50)
+FONT_SCREEN = pygame.freetype.Font(file_path + "/assets/fonts/oldterminal.ttf",24)
+FONT_SCREEN_SMALL = pygame.freetype.Font(file_path + "/assets/fonts/oldterminal.ttf",18)
 COLOR_TERMINAL = (110,230,10)
 
 #UI 
-image_computer = pygame.image.load("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/computerbase.png")
+image_computer = pygame.image.load(file_path + "/assets/computerbase.png")
 image_computer = pygame.transform.scale(image_computer, (1280, 720))
 TEXT_POS = (400,150)
 
@@ -23,13 +27,13 @@ screen = pygame.display.set_mode((1280, 720))
 
 #Sounds
 
-SOUND_CHITTER1 = pygame.mixer.Sound("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/sounds/Chitter1.wav") 
-SOUND_TYPINGSOUND1 = pygame.mixer.Sound("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/sounds/TypingSound1.wav")
-SOUND_TYPINGSOUND = pygame.mixer.Sound("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/sounds/TypingSound.wav")
-SOUND_TOGGLE = pygame.mixer.Sound("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/sounds/Toggle.wav") 
-SOUND_BEEP5 = pygame.mixer.Sound("/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/sounds/Beep5.wav") 
+SOUND_CHITTER1 = pygame.mixer.Sound(file_path + "/assets/sounds/Chitter1.wav") 
+SOUND_TYPINGSOUND1 = pygame.mixer.Sound(file_path + "/assets/sounds/TypingSound1.wav")
+SOUND_TYPINGSOUND = pygame.mixer.Sound(file_path + "/assets/sounds/TypingSound.wav")
+SOUND_TOGGLE = pygame.mixer.Sound(file_path + "/assets/sounds/Toggle.wav") 
+SOUND_BEEP5 = pygame.mixer.Sound(file_path + "/assets/sounds/Beep5.wav") 
 
-pygame.mixer.music.load('/Users/charliestreet/Desktop/Hacklahoma 2024/OldBoysHacklahoma24/assets/sounds/BackgroundEther.wav')
+pygame.mixer.music.load(file_path + "/assets/sounds/BackgroundEther.wav")
 
 # Setting the volume 
 
